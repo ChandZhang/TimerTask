@@ -23,20 +23,17 @@ This is a js timer for auto run tasks.
 
 	<script src="TimerTask.js"></script>
 	<script>
-		$(function() {
-			var task = new TimerTask();
-			task.start();
+		var task = new TimerTask();
+		task.start();
+		console.log((new Date()).getTime())
+		task.setTask(1,function(){
 			console.log((new Date()).getTime())
-			task.setTask(1,function(){
-				console.log((new Date()).getTime())
-			});
-			task.setTask(2,function(){
-				console.log((new Date()).getTime())
-			});
-			task.setTask(3.5,function(a,b){
-				console.log(a,b)
-			},"ar1","ar2");
-
 		});
+		task.setTask(2,function(){
+			console.log((new Date()).getTime())
+		});
+		task.setTask(3.5,function(a,b){
+			console.log(a,b)
+		},"ar1","ar2");
 	</script>
 
