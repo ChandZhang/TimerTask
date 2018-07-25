@@ -9,9 +9,11 @@ This is a js timer for auto run tasks.
 		var task = new TimerTask();
 		// 2. Start run timer;
 		task.start();
-		// 3. Add task
+		// 3. Add task(time second, minimum 0.1s). 
+		// 	Means, run doFunction after time second from now if timer is already started.
+		// 	Or, run doFunction after time second When the timer starts running if time is not started.
 		var id = task.setTask(time, doFunction,param)
-		// 4. Remove task
+		// 4. Remove task by id
 		task.removeTask(id)
 		//5. Get task(s)
 		task.getTask([time])
