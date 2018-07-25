@@ -1,2 +1,3 @@
 *.html linguist-language=javascript
 *.js linguist-language=javascript
+*.md linguist-language=javascript
